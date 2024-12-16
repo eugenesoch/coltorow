@@ -29,4 +29,4 @@ Ensure your HTML contains a grid container with the `coltorow='grid'` attribute 
   <!-- Add more items as needed -->
 </div>
 
-## Made by Eugene Soch & Matt Tulle
+### Made by Eugene Soch & Matt Tullet
