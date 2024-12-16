@@ -1,5 +1,6 @@
 /* Default styles for the masonry grid */
 [coltorow="grid"] {
+  opacity: 0; /* Hidden initially */
   transition: opacity 300ms ease-in-out;
   display: block; /* Ensure it's visible */
 }
