@@ -17,6 +17,7 @@ This JavaScript script dynamically rearranges items in a masonry grid layout bas
 
 ## Usage
 
+
 Free to use on any projects.
 
 ### HTML Structure
@@ -28,5 +29,8 @@ Ensure your HTML contains a grid container with the `coltorow='grid'` attribute 
   <div coltorow="item">Item 3</div>
   <!-- Add more items as needed -->
 </div>
+```
 
-### Made by Eugene Soch & Matt Tullet
+
+## Made by
+Eugene Soch & Matt Tullet
