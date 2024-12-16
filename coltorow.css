@@ -1,0 +1,22 @@
+/* Default styles for the masonry grid */
+[coltorow="grid"] {
+  transition: opacity 300ms ease-in-out;
+  display: block; /* Ensure it's visible */
+}
+
+/* Ensure opacity is 1 in the Webflow Editor */
+.w-editor [coltorow="grid"],
+body.is-editor [coltorow="grid"] {
+  opacity: 1 !important; /* Override to ensure visibility in the editor */
+}
+
+/* Ensure no transitions occur in the editor for better editing experience */
+.w-editor [coltorow="grid"],
+body.is-editor [coltorow="grid"] {
+  transition: none !important;
+}
+
+/* Ensure opacity is 1 when JavaScript is disabled */
+noscript [coltorow="grid"] {
+  opacity: 1 !important;
+}
