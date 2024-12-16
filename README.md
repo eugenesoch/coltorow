@@ -1,28 +1,32 @@
-# Coltorow
-  This JavaScript script dynamically manages the layout of a masonry grid by rearranging its items based on the current viewport size and the grid's column count. It includes the following features:
+# Masonry Grid Reorder Script
 
-*Dynamic Grid Reordering:*
+This JavaScript script dynamically rearranges items in a masonry grid layout based on the number of columns defined in the CSS. It ensures smooth transitions and a responsive design by observing changes in the `column-count` property of the grid.
 
-The reorderAndReplaceMasonryItems function calculates the appropriate column distribution for the grid items and rearranges them to fit into the specified number of columns dynamically.
+## Features
 
-*Fade-In Effect for Grid Updates:*
+- **Dynamic Reordering**: Automatically redistributes grid items to fit the defined column layout.
+- **Column-Driven Updates**: Observes changes in the grid's column count instead of screen size for reordering.
+- **Fade-In Transition**: Includes a smooth opacity transition for visual consistency during updates.
+- **Debounced Resize Listener**: Ensures efficient layout recalculations when the browser window is resized.
 
-The updateGridOrder function ensures the grid remains visually seamless during updates by fading in the grid after reordering.
+## How It Works
 
-*Responsive Design Adjustments:*
+1. The script observes the `column-count` property of a grid container with the attribute `[coltorow='grid']`.
+2. On detecting a change in column count, it rearranges the items within the grid to match the new layout.
+3. The script applies a fade-in effect to the grid after reordering to provide a seamless user experience.
 
-The onViewportResize function detects viewport size changes (e.g., switching between tablet and desktop) and adjusts the grid layout accordingly.
+## Usage
 
-*Debounced Resize Event:*
+Free to use on any projects.
 
-A debounced resize event listener prevents excessive layout recalculations during continuous resizing.
+### HTML Structure
+Ensure your HTML contains a grid container with the `coltorow='grid'` attribute and child items with the `coltorow='item'` attribute:
+```html
+<div coltorow="grid">
+  <div coltorow="item">Item 1</div>
+  <div coltorow="item">Item 2</div>
+  <div coltorow="item">Item 3</div>
+  <!-- Add more items as needed -->
+</div>
 
-*Initial Setup:*
-
-On page load, the script hides the grid, sets up a smooth opacity transition, and performs the initial reordering of grid items.
-Fallback Handling:
-
-It handles edge cases where the grid or its column count is unavailable, logging appropriate errors to the console.
-This script is particularly useful for creating responsive and visually appealing masonry-style layouts that adapt to different screen sizes seamlessly.
-
-Coded by Eugene Soch & Matt Tullet
+## Made by Eugene Soch & Matt Tulle
